@@ -3,34 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        
-    </header>
-    <main></main>
-    <footer></footer>
 
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
+    <header>
+      <img id="DPC_Logo" src="img/DACHPC_Logo_19_04_2024_color_flach.svg" alt="Hier sollte das DACHPC-Logo zu sehen sein..."> 
+      <a href="quiz.html">
+      <button id="logoutButton"><img src="img/logout.png" alt="Logout"></button>
+      </a>
+    </header>
+    <main>
+
       
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyD1fptCiGz__h_A1X_0Hb3FxDe71PUv_rE",
-          authDomain: "dpc-lernplattform-fcbf9.firebaseapp.com",
-          projectId: "dpc-lernplattform-fcbf9",
-          storageBucket: "dpc-lernplattform-fcbf9.appspot.com",
-          messagingSenderId: "59992383024",
-          appId: "1:59992383024:web:73b51b9b56db02b258d7f5"
-        };
+
+      <button id="Spielbutton">Spielwiese original</button> 
+
       
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-      </script>
+
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <label for="loginEmail">E-Mail:</label>
+            <input type="email" name="loginEmail" required><br><br>
+            
+            <label for="loginPassword">Passwort:</label>
+            <input type="password" name="loginPassword" required><br><br>
+            
+            <button onclick="login()" type="submit">Einloggen</button>
+        </form>
+    
+        <hr>
+    
+        <h2>Registrieren</h2>
+        <form>
+            
+            <label for="registerPrename">Vorname:</label>
+            <input id="preName" type="text" name="registerPrename" required><br><br>
+            <label for="registerName">Nachname:</label>
+            <input id ="Name" type="text" name="registerName" required><br><br>
+            <label for="registerEmail">E-Mail:</label>
+            <input id="email" type="email" name="registerEmail" required><br><br>
+            <label for="registerPassword">Passwort:</label>
+            <input id="password" type="password" name="registerPassword" required><br><br>
+            <button onclick="register()">Register</button>
+        </form>
+      
+    <div class="quiz mainbox"> 
+      <div class="quiz frage"></div>
+      <div class="quiz antwortA"></div>
+      <div class="quiz antwortB"></div>
+      <div class="quiz antwortC"></div>
+      <div class="quiz antwortD"></div>
+      <div class="quiz button"></div> 
+    </div> 
+    </main>
+    <footer></footer>
 </body>
+  <script>
+    const register = () => { console.log("Registrieren getestet") }
+</script>
+  <script type="module" src="script.js"></script>
 </html>
