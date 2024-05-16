@@ -7,38 +7,9 @@
     <script defer src="/__/firebase/10.12.0/firebase-app-compat.js"></script>
     <script defer src="/__/firebase/10.12.0/firebase-database-compat.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <script>
-           
-        // der Event-Listener wartet das DOM vollständig geladen wurde, bevor code ausgeführt
-        document.addEventListener('DOMContentLoaded', function(){
-          // Referenz auf die Firebase Realtime Database erstellen
-          let database = firebase.database();
-
-          // Referenz auf den Pfad in der Datenbank erstellen
-          let scrumRef = database.ref('Scrum');
-
-          // Daten abrufen
-          scrumRef.once('value', function(snapshot) {
-              var scrumData = snapshot.val();
-              //console.log(scrumData[1]["Frage"]); 
-              
-              const frage = document.createElement("h1");
-              frage.innerText = scrumData[1]["Frage"];
-              document.body.appendChild(frage);
-
-              for (i = 1; i <= 4; i++) {
-                const antwort = document.createElement("p")
-                antwort.innerText = scrumData[1][i];
-                document.body.appendChild(antwort);
-              }
-
-          });
-          
-
-      });
-        
-    </script>
+    
 </body>
 </html>

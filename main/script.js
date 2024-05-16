@@ -1,9 +1,26 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyD1fptCiGz__h_A1X_0Hb3FxDe71PUv_rE",
-    authDomain: "dpc-lernplattform-fcbf9.firebaseapp.com",
-    projectId: "dpc-lernplattform-fcbf9",
-    storageBucket: "dpc-lernplattform-fcbf9.appspot.com",
-    messagingSenderId: "59992383024",
-    appId: "1:59992383024:web:73b51b9b56db02b258d7f5"
-  }
-  const app = initializeApp(firebaseConfig);
+        // der Event-Listener wartet das DOM vollständig geladen wurde, bevor code ausgeführt
+        document.addEventListener('DOMContentLoaded', function(){
+          // Referenz auf die Firebase Realtime Database erstellen
+          let database = firebase.database();
+
+          // Referenz auf den Pfad in der Datenbank erstellen
+          let scrumRef = database.ref('Scrum');
+
+          // Daten abrufen
+          scrumRef.on('value', function(snapshot) {
+              var scrumData = snapshot.val();
+              //console.log(scrumData[1]["Frage"]); 
+              
+              const frage = document.createElement("h1");
+              frage.innerText = scrumData[1]["Frage"];
+              document.body.appendChild(frage);
+
+              for (let i = 1; i <= 4; i++) {
+                const antwort = document.createElement("p")
+                antwort.innerText = scrumData[1][i];
+                document.body.appendChild(antwort);
+              }
+
+          });
+      });
+        
