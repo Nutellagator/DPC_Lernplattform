@@ -9,7 +9,7 @@
 body {
     width: 100vw;  
     height: 100vh;
-    background-color: blue;
+    
 }
 
 header {
@@ -42,3 +42,37 @@ footer {
     height: 33,33%;
     background-color: lightgreen;
 }
+
+/* Quiz */
+#quizMainBox {
+    width: 70%;  
+    max-width: 500px;  
+    margin: 0 auto;
+    margin-top: 10%;  
+    background-color: lightblue;  
+    padding: 20px;  
+}
+.frage {
+    background-color: #3498db; 
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    color: white;
+    font-weight: bold;
+}
+.antwort {
+    background-color: #ff1900;  
+    width: 100%;
+    margin-right: 20px; 
+    margin-bottom: 20px;  
+    padding: 10px;  
+    box-sizing: border-box;  
+    color: white;
+}
+.antwort:hover {
+    background-color: #a53326;
+}
+/* #frageID{
+    color: white;
+    font-weight: bold;
+} */
