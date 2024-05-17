@@ -8,19 +8,41 @@
     <script defer src="/__/firebase/10.12.0/firebase-app-compat.js"></script>
     <script defer src="/__/firebase/10.12.0/firebase-database-compat.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script defer src="/__/firebase/10.12.0/firebase-auth-compat.js"></script>
+    <script defer src="registerAndLogin.js"></script>
 </head>
 <body>
 
     <header>
-      <img id="DPC_Logo" src="img/DACHPC_Logo_19_04_2024_color_flach.svg" alt="Hier sollte das DACHPC-Logo zu sehen sein..."> 
-      <a href="quiz.html">
-      <button id="logoutButton"><img src="img/logout.png" alt="Logout"></button>
-      </a>
+        <div id="userInfoMainbox">
+            <div id="userTextBox">
+              <div class="infoText userBox">
+                <span>Du bist eingeloggt als: </span>
+              </div>
+              <div class="vorname userBox">
+                <span id="vornameText"></span>
+              </div>
+              <div class="nachname userBox">
+                <span id="nachnameText"></span>
+              </div>
+              <div class="level userBox">
+                <span>Level: </span>
+                <span id="levelText"></span>
+              </div>
+            </div>
+            <div id="userLogoutBox">
+              <img
+                id="logoutButton"
+                src="img/logout.png"
+                alt="hier sollte der logout Button zu sehen sein"
+              />
+            </div>
+          </div>
     </header>
     <main>
       
 
-      <button id="Spielbutton">Spielwiese original</button> 
+      
 
       
 
@@ -39,11 +61,6 @@
     
         <h2>Registrieren</h2>
         <form>
-            
-            <label for="registerPrename">Vorname:</label>
-            <input id="preName" type="text" name="registerPrename" required><br><br>
-            <label for="registerName">Nachname:</label>
-            <input id ="Name" type="text" name="registerName" required><br><br>
             <label for="registerEmail">E-Mail:</label>
             <input id="email" type="email" name="registerEmail" required><br><br>
             <label for="registerPassword">Passwort:</label>

@@ -6,42 +6,45 @@
     z-index: 0;
 }
 
-body {
-    width: 100vw;  
-    height: 100vh;
+
+/* Header Info and LogOut */
+header {
+    width: 100%;
+    height: 5vh;
+    background-color: lightblue;
     
 }
-
-header {
-    /* display: flex;
-    justify-content: center; */
-    height: 33,33%;
-    background-color: lightblue;
+#userInfoMainbox {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: stretch; /* Stellt sicher, dass die Kinder die gesamte Höhe einnehmen */
+    height: 100%; /* Setzt die Höhe des Containers */
 }
-
+#userTextBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 80%;
+    padding-left: 5%;
+}
+#userLogoutBox {
+    display: flex;
+    justify-content: flex-end; /* Inhalt ganz rechts */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    width: 20%;
+} 
 #logoutButton {
-    margin-right: 10%;
+    width: 5vh;
+    height: 5vh;
     border: none;
-    outline: none;
-    padding-right: 10px;
+    outline: none;  
 }
 
 #logoutButton:hover {
     background-color: rgb(149, 14, 14);
 }
 
-main {
-    width: 100%;
-    height: 33,33%;
-    background-color: lightcoral;
-}
-
-
-footer {
-    width: 100%;
-    height: 33,33%;
-    background-color: lightgreen;
-}
 
 /* Quiz */
 #quizMainBox {
@@ -81,6 +84,8 @@ footer {
 }
 
 /* Media Query für Tablets */
+/* diese Regel wird nur dann angewendet wenn Bildshirmbreite
+1000px beträgt oder kleiner */
 @media (max-width: 1000px) {
     #quizMainBox {
         width: 80%; /* Nimmt 80% der Breite des Fensters ein */
@@ -92,10 +97,15 @@ footer {
 /* Media Query für Smartphones */
 @media (max-width: 768px) {
     #quizMainBox {
-        width: 95%; /* Nimmt 95% der Breite des Fensters ein */
-        margin-top: 50%; /* Weniger Abstand oben */
-        padding: 10px; /* Weniger Padding für Smartphones */
+        width: 95%; 
+        margin-top: 50%; 
+        padding: 10px; 
     }
 }
 
+footer {
+    width: 100%;
+    height: 33,33%;
+    background-color: lightgreen;
+}
 

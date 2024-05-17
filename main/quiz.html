@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
     <script defer src="/__/firebase/10.12.0/firebase-app-compat.js"></script>
-    <script defer src="/__/firebase/10.12.0/firebase-database-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/10.12.0/firebase-database-compat.js"
+    ></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div id="quizMainBox">
-    <img class ="dachpcLogo" src="img/DACHPC_Logo_19_04_2024_color_flach.svg" alt="Hier sollte das DACHPC-Logo zu sehen sein...">
-    <div class="frage quizBox">
-       <p id="frageID"></p>
-    </div>
-    <div id="1" class="antwort quizBox">
-      <span> a) </span><span id="antwort1"></span>
-    </div>
-    <div id="2" class="antwort quizBox">
-      <span> b) </span><span id="antwort2"></span>
-    </div>
-    <div id="3" class="antwort quizBox">
-      <span> c) </span><span id="antwort3"></span>
-    </div>
-    <div id="4" class="antwort quizBox">
-      <span> d) </span><span id="antwort4"></span>
-    </div>
-  </div> 
-</body>
+    <script defer src="quizScript.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div id="userInfoMainbox">
+        <div id="userTextBox">
+          <div class="infoText userBox">
+            <span>Du bist eingeloggt als: </span>
+          </div>
+          <div class="vorname userBox">
+            <span id="vornameText"></span>
+          </div>
+          <div class="nachname userBox">
+            <span id="nachnameText"></span>
+          </div>
+          <div class="level userBox">
+            <span>Level: </span>
+            <span id="levelText"></span>
+          </div>
+        </div>
+        <div id="userLogoutBox">
+          <img
+            id="logoutButton"
+            src="img/logout.png"
+            alt="hier sollte der logout Button zu sehen sein"
+          />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="quizMainBox">
+        <img
+          class="dachpcLogo"
+          src="img/DACHPC_Logo_19_04_2024_color_flach.svg"
+          alt="Hier sollte das DACHPC-Logo zu sehen sein..."
+        />
+        <div class="frage quizBox">
+          <p id="frageID"></p>
+        </div>
+        <div id="1" class="antwort quizBox">
+          <span> a) </span><span id="antwort1"></span>
+        </div>
+        <div id="2" class="antwort quizBox">
+          <span> b) </span><span id="antwort2"></span>
+        </div>
+        <div id="3" class="antwort quizBox">
+          <span> c) </span><span id="antwort3"></span>
+        </div>
+        <div id="4" class="antwort quizBox">
+          <span> d) </span><span id="antwort4"></span>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
 </html>
