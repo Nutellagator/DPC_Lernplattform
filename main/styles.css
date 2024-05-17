@@ -53,7 +53,7 @@ footer {
     padding: 20px;  
 }
 .frage {
-    background-color: #3498db; 
+    background-color: black; 
     width: 100%; 
     padding: 10px; 
     margin-bottom: 20px; 
@@ -61,16 +61,17 @@ footer {
     font-weight: bold;
 }
 .antwort {
-    background-color: #ff1900;  
+    background-color: #3498db; 
+    color: white; 
     width: 100%;
     margin-right: 20px; 
     margin-bottom: 20px;  
     padding: 10px;  
     box-sizing: border-box;  
-    color: white;
+    
 }
 .antwort:hover {
-    background-color: #a53326;
+    background-color: #124465;
 }
 /* #frageID{
     color: white;
