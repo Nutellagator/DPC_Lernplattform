@@ -52,6 +52,12 @@ footer {
     background-color: lightblue;  
     padding: 20px;  
 }
+.dachpcLogo {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
 .frage {
     background-color: black; 
     width: 100%; 
@@ -73,7 +79,23 @@ footer {
 .antwort:hover {
     background-color: #124465;
 }
-/* #frageID{
-    color: white;
-    font-weight: bold;
-} */
+
+/* Media Query für Tablets */
+@media (max-width: 1000px) {
+    #quizMainBox {
+        width: 80%; /* Nimmt 80% der Breite des Fensters ein */
+        margin-top: 30%; /* Weniger Abstand oben */
+        padding: 10px; /* Weniger Padding für Tablets */
+    }
+}
+
+/* Media Query für Smartphones */
+@media (max-width: 768px) {
+    #quizMainBox {
+        width: 95%; /* Nimmt 95% der Breite des Fensters ein */
+        margin-top: 50%; /* Weniger Abstand oben */
+        padding: 10px; /* Weniger Padding für Smartphones */
+    }
+}
+
+
